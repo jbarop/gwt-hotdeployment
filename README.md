@@ -25,4 +25,30 @@ Enables automatic reloading of server classes in GWT's internal Jetty
     limitations under the License.
 
 
-## TODO
+## Usage (with Maven)
+
+1. Add _gwt-hotdeployment_ as dependency to your Maven project:
+
+    ```
+    <dependency>
+      <groupId>de.barop.gwt</groupId>
+      <artifactId>gwt-hotdeployment</artifactId>
+      <version>0.1-SNAPSHOT</version>
+    </dependency>
+    ```
+
+2. Set _gwt-hotdeployment_'s customized Jetty as server launcher
+
+    ```
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>gwt-maven-plugin</artifactId>
+      <version>${gwt.version}</version>
+      <configuration>
+        <-- ... -->
+        <server>de.barop.gwt.HotDeploymentJettyLauncher</server>
+      </configuration>
+    </plugin>
+    ```
+
+3. Have fun
