@@ -1,5 +1,7 @@
 # gwt-hotdeployment
 
+[![Build Status](https://buildhive.cloudbees.com/job/jbarop/job/gwt-hotdeployment/badge/icon)](https://buildhive.cloudbees.com/job/jbarop/job/gwt-hotdeployment/)
+
 
 ## Description
 
