@@ -67,6 +67,7 @@
 
   <modules>
     <module>gwt-hotdeployment</module>
+    <module>gwt-hotdeployment-demo</module>
   </modules>
 
 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+
+  <parent>
+    <groupId>de.barop.gwt</groupId>
+    <artifactId>gwt-hotdeployment-project</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+
+
+  <artifactId>gwt-hotdeployment-example</artifactId>
+  <packaging>war</packaging>
+  <name>GWT Hot Deployment</name>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>${gwt.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>de.barop.gwt</groupId>
+      <artifactId>gwt-hotdeployment</artifactId>
+    </dependency>
+  </dependencies>
+
+
+  <build>
+    <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+        <version>${gwt.version}</version>
+        <executions>
+          <execution>
+            <id>compile-gwt</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <!--
+            Configure the customized Jetty as server launcher
+            -->
+          <server>de.barop.gwt.HotDeploymentJettyLauncher</server>
+
+          <!--
+            Your ordinary gwt-maven-plugin configuration...
+            -->
+          <logLevel>INFO</logLevel>
+          <inplace>false</inplace>
+          <style>DETAILED</style>
+          <optimizationLevel>0</optimizationLevel>
+          <draftCompile>true</draftCompile>
+          <enableAssertions>true</enableAssertions>
+          <disableCastChecking>false</disableCastChecking>
+          <disableClassMetadata>false</disableClassMetadata>
+          <enableClosureCompiler>false</enableClosureCompiler>
+          <fragmentCount>-1</fragmentCount>
+          <disableRunAsync>true</disableRunAsync>
+          <compileReport>false</compileReport>
+          <soycDetailed>false</soycDetailed>
+          <extraJvmArgs>-Xms512m -Xmx1g -XX:MaxPermSize=256m</extraJvmArgs>
+          <copyWebapp>true</copyWebapp>
+          <runTarget>index.html</runTarget>
+          <debugSuspend>false</debugSuspend>
+          <warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
+          <hostedWebapp>${webappDirectory}</hostedWebapp>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+
+</project>
