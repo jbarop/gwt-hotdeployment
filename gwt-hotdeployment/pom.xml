@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+
+  <parent>
+    <groupId>de.barop.gwt</groupId>
+    <artifactId>gwt-hotdeployment-project</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+
+
+  <artifactId>gwt-hotdeployment</artifactId>
+  <packaging>jar</packaging>
+  <name>GWT Hot Deployment</name>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-dev</artifactId>
+    </dependency>
+  </dependencies>
+
+
+</project>

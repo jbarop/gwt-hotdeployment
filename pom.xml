@@ -14,10 +14,10 @@
 
 
   <groupId>de.barop.gwt</groupId>
-  <artifactId>gwt-hotdeployment</artifactId>
+  <artifactId>gwt-hotdeployment-project</artifactId>
   <version>0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <name>GWT Hot Deployment</name>
+  <packaging>pom</packaging>
+  <name>GWT Hot Deployment Aggregator Project</name>
   <description>Enables automatic reloading of server classes in GWT's internal Jetty</description>
   <url>https://github.com/jbarop/gwt-hotdeployment</url>
 
@@ -48,14 +48,26 @@
   </properties>
 
 
-  <dependencies>
-    <dependency>
-      <groupId>com.google.gwt</groupId>
-      <artifactId>gwt-dev</artifactId>
-      <version>${gwt.version}</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-dev</artifactId>
+        <version>${gwt.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>de.barop.gwt</groupId>
+        <artifactId>gwt-hotdeployment</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+  <modules>
+    <module>gwt-hotdeployment</module>
+  </modules>
 
 
 </project>
