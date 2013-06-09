@@ -12,7 +12,7 @@
 
   <groupId>de.barop.gwt</groupId>
   <artifactId>gwt-hotdeployment-project</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>GWT Hot Deployment Aggregator Project</name>
   <description>Enables automatic reloading of the web application context in GWT's internal Jetty when compiled classes change</description>
