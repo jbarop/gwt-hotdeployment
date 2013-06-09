@@ -5,12 +5,14 @@
 
 ## Description
 
-Enables automatic reloading of server classes in GWT's internal Jetty
+Are you working with server side code in GWT's Development Mode and it's internal Jetty? Bored of reloading/redeploying by hand when you did change something in server code? Annoyed when did forget to reload?
+
+_gwt-hotdeployment_ enables automatic reloading of the web application context when compiled classes change.
 
 
 ## License
 
-    Copyright 2012 Johannes Barop
+    Copyright 2013 Johannes Barop
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@ Enables automatic reloading of server classes in GWT's internal Jetty
     limitations under the License.
 
 
-## Usage (with Maven)
+## Usage
 
 1. Add _gwt-hotdeployment_ as dependency to your Maven project:
 
@@ -33,7 +35,7 @@ Enables automatic reloading of server classes in GWT's internal Jetty
     <dependency>
       <groupId>de.barop.gwt</groupId>
       <artifactId>gwt-hotdeployment</artifactId>
-      <version>0.1-SNAPSHOT</version>
+      <version>1.0</version>
     </dependency>
     ```
 
@@ -43,7 +45,6 @@ Enables automatic reloading of server classes in GWT's internal Jetty
     <plugin>
       <groupId>org.codehaus.mojo</groupId>
       <artifactId>gwt-maven-plugin</artifactId>
-      <version>${gwt.version}</version>
       <configuration>
         <-- ... -->
         <server>de.barop.gwt.HotDeploymentJettyLauncher</server>
@@ -52,3 +53,11 @@ Enables automatic reloading of server classes in GWT's internal Jetty
     ```
 
 3. Have fun
+
+    Don't forget that server side code has to be compiled. You may
+    want to set up your develop environment to do so automaticly.
+
+
+## Demo
+
+The repository contains a demo application ``gwt-hotdeployment-demo`` with which you can play around.

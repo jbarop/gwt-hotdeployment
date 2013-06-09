@@ -18,7 +18,7 @@
   <version>0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>GWT Hot Deployment Aggregator Project</name>
-  <description>Enables automatic reloading of server classes in GWT's internal Jetty</description>
+  <description>Enables automatic reloading of the web application context in GWT's internal Jetty when compiled classes change</description>
   <url>https://github.com/jbarop/gwt-hotdeployment</url>
 
 
