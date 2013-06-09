@@ -36,6 +36,7 @@ _gwt-hotdeployment_ enables automatic reloading of the web application context w
       <groupId>de.barop.gwt</groupId>
       <artifactId>gwt-hotdeployment</artifactId>
       <version>1.0</version>
+      <scope>provided</scope>
     </dependency>
     ```
 

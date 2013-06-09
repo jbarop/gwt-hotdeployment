@@ -67,6 +67,7 @@
         <groupId>de.barop.gwt</groupId>
         <artifactId>gwt-hotdeployment</artifactId>
         <version>${project.version}</version>
+        <scope>provided</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
